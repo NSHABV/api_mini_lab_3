@@ -1,67 +1,26 @@
-# api_mini_lab_3
-## О чём лаба?
-Лаба про реализацию backend приложения без базы данных, которое обращается к сторонним сервисам по API с помощью HTTP запросов. Необходимо выбрать и выполнить один из трёх вариантов задания, описанных ниже.
+# Miscellanious TKInter-based Python API application.
 
-## Первый вариант задания 
-1. Реализовать собственное бэкенд-приложение на любом языке и любом фреймворке, в котором будет использоваться API внешнего сервиса. В приложении должно быть минимум 3 эндпоинта для реализации логики работы сервиса. Наличие БД не обязательно;
-2. Задокументируйте запросы Вашего сервиса в Postman, прикрепите ссылку на workspace в readme.md;
-3. Прописать в readme.md подробную инструкцию по разворачиванию и конфигурации приложения локально. Прописать в readme.md логику работы Вашего приложения. readme.md должен быть написан строго на английском языке.
+This is a simple Python app that uses Tkinter's GUI methods to create an interface for displaying info about three APIs of various sources: APPL Stock Prices, RUB value compared to USD/CHF/EUR, and weather in Saint-Petersburg, Russia.
 
+## Installation
+To run this application, you need to have Python 3 installed on your system. You can download it from [here](https://www.python.org/downloads) and will also need to install some Python packages using pip. To do that, open a Powershell terminal or command prompt and run the following command:
 
-## Второй вариант задания
-1. Реализуйте логику построения социального графа для пользователя Github, основываясь на готовом fastAPI;
-2. Задокументируйте запросы Вашего сервиса в Postman, прикрепите ссылку на workspace в readme.md;
-3. Пропишите в readme.md логику изменений, которые Вы внесли в исходное приложение. readme.md должен быть написан строго на английском языке.
-4. Добавьте минимум два собственных endpoint, которые будут участвовать в работе приложения;
-5. Модифицируйте или замените существующий frontend. frontend может быть написан не только на JS. Это может быть, например, скрипт на python, который с помощью HTTP запроса будет обращаться к Вашему backend-приложению и строить визуализацию графа по полученным данным.
+pip install requests requests-cache retry-requests
+This will install the required packages for making API requests, caching responses, and retrying failed requests.
 
+## Usage
 
-## Третий вариант задания
-1. Модифицируйте существующее backend-приложение для работы с существующей реализацией frontend;
-Существующая реализация frontend работает со следующими значениями из получаемого от backend ответа:
-- login: имя пользователя
-- followers: список фолловеров пользователя (могут содержать вложенные поля followers)
-- avatar_url: картинка, которую отображать вместо квадратика
-- size: размер иконки (можно модифицировать, основываясь на знаниях о пользователе)
+To run the application, navigate to the folder where you have saved the main.py file and run the following command:
 
-Необходимо получить для каждого followera исходного пользователя всех его follower-ов и добавить их в ответ в соответствющие поля.
+python main.py
 
-Необходимо вычислить значение size для каждого из пользователей(запрашиваемый пользователь, его фолловеры, и все фолловеры фолловеров, ...). Вычислять размер иконки можно на основании его активности в последнее время, количества репозиториев, других параметров.
+This will open a window with three buttons: Apple Stock Options, SPB Weather, and RUB Exchange rate. These correspond to API interfaces.
 
-2. Задокументируйте запросы Вашего сервиса в Postman, прикрепите ссылку на workspace в readme.md;
+## APPL Stock
+This financial interface allows you to get the EOD data for APPL using the [Marketstack API](https://api.marketstack.com) You can view high, low, close and current values of APPL stock options.
+## Exchange Rate
+The exchange rate interface allows you to view current exchange rates using the [Apilayer API](https://apilayer.com/) You will be able to view the exchange of RUB/USD, RUB/EUR, RUB/CHF.
+## Saint-Petersburg Weather
+The weather GUI allows you to get the weather data using the [Weatherstack API](https://api.weatherstack.com) You will be able to view current temperature, humidity, atmospheric pressure.
 
-3. Добавьте минимум два собственных enpoint. Они могут не участвовать в логике frontend приложения, но должны быть задокументированы;
-
-4. Пропишите в readme.md логику изменений, которые Вы внесли в исходное приложение. readme.md должен быть написан строго на английском языке;
-
-## Материалы
-* [Документация GitHub API](https://docs.github.com/en/rest/users/followers) (в коде используется запрос "List followers of a user")
-* [Postman](https://www.postman.com/) (для генерации ссылки нажмите share для желаемого workspace и сгенерируйте JSON-ссылку)
-
-
-## Запуск приложений из репозитория
-* Склонируйте репозиторий
-### Backend
-* Создайте и **активируйте** виртуальное окружение для проекта 
-* Пройдите в корень проекта и установите зависимости с помощью команды pip install -r requrements.txt
-* Запустите в окружении main.py (Обратите внмание, что по умолчанию сервер должен подняться по адресу http://localhost:5000/, в противном случае дефолтный фронтенд не сможет найти его)
-### Frontend
-* Пройдите в папку frontend
-* Установите зависимости с помощью команды npm install
-* Запустите web сервер с помощью команды npm run start:dev. Сервер поднимется по адресу: http://localhost:9000/
-
-
-
-## Настройка репозитория
-Сделайте свою приватную копию репозитория. Как это сделать, описано [тут](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274) или [тут](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private). Или можно создать чистый репозиторий самостоятельно и залить код туда. Важно, чтобы он был приватным!
-
-Добавьте проверяющего в коллабораторы. GitHub логин: **maegv**.
-
-## Отправка задания
-Выполните задания, сохраните изменения, сделайте commit и push в свой репозиторий.
-
-Напишите на почту apicourse@yandex.ru письмо с темой вида MiniLab-3 ФИО группа с просьбой проверить работу. В письме должна быть ссылка на репозиторий с выполненной работой, проверяться будет версия, которая лежит в ветке main. Репозиторий должен быть приватным; в ветке main не должно быть файлов и папок с русскими названиями!
-
-
-## Дедлайн
-**Дедлайн:** 23:59 26/11/2023 (26 ноября).
+Postman Link: https://restless-desert-745649.postman.co/workspace/Team-Workspace~7e83226d-b623-4fef-85d3-7e4bc5c2630e/overview
