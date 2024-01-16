@@ -17,10 +17,10 @@ python main.py
 This will open a window with three buttons: Apple Stock Options, SPB Weather, and RUB Exchange rate. These correspond to API interfaces.
 
 ## APPL Stock
-This financial interface allows you to get the EOD data for APPL using the [Marketstack API](https://api.marketstack.com You can view high, low, close and current values of APPL stock options.
+This financial interface allows you to get the EOD data for APPL using the [Marketstack API](https://api.marketstack.com) You can view high, low, close and current values of APPL stock options.
 ## Exchange Rate
-The exchange rate interface allows you to view current exchange rates using the [Apilayer API](https://apilayer.com/ You will be able to view the exchange of RUB/USD, RUB/EUR, RUB/CHF.
+The exchange rate interface allows you to view current exchange rates using the [Apilayer API](https://apilayer.com/) You will be able to view the exchange of RUB/USD, RUB/EUR, RUB/CHF.
 ## Saint-Petersburg Weather
-The weather GUI allows you to get the weather data using the [Weatherstack API](https://api.weatherstack.com You will be able to view current temperature, humidity, atmospheric pressure.
+The weather GUI allows you to get the weather data using the [Weatherstack API](https://api.weatherstack.com) You will be able to view current temperature, humidity, atmospheric pressure.
 
 Postman Link: https://restless-desert-745649.postman.co/workspace/Team-Workspace~7e83226d-b623-4fef-85d3-7e4bc5c2630e/overview
