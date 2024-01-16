@@ -3,7 +3,7 @@
 This is a simple Python app that uses Tkinter's GUI methods to create an interface for displaying info about three APIs of various sources: APPL Stock Prices, RUB value compared to USD/CHF/EUR, and weather in Saint-Petersburg, Russia.
 
 ## Installation
-To run this application, you need to have Python 3 installed on your system. You can download it from [here](https://www.python.org/downloads/You) and will also need to install some Python packages using pip. To do that, open a Powershell terminal or command prompt and run the following command:
+To run this application, you need to have Python 3 installed on your system. You can download it from [here](https://www.python.org/downloads) and will also need to install some Python packages using pip. To do that, open a Powershell terminal or command prompt and run the following command:
 
 pip install requests requests-cache retry-requests
 This will install the required packages for making API requests, caching responses, and retrying failed requests.
